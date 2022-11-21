@@ -1,0 +1,51 @@
+﻿<Page x:Class="Practica.AddEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Practica"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="650"
+      Title="AddEditPage">
+
+    <Grid Background="white">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="183*"/>
+            <ColumnDefinition Width="617*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="53*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock TextAlignment="Center" FontSize="14">Имя</TextBlock>
+        <TextBlock Grid.Row="1" TextAlignment="Center" FontSize="14">Фамилия</TextBlock>
+        <TextBlock Grid.Row="2" TextAlignment="Center" FontSize="14">Отчество</TextBlock>
+        <TextBlock Grid.Row="3" TextAlignment="Center" FontSize="14">Пол</TextBlock>
+        <TextBlock Grid.Row="4" TextAlignment="Center" FontSize="14">Телефон</TextBlock>
+        <TextBlock Grid.Row="5" TextAlignment="Center" FontSize="14">Фото</TextBlock>
+        <TextBlock Grid.Row="6" TextAlignment="Center" FontSize="14">День рождения</TextBlock>
+        <TextBlock Grid.Row="7" TextAlignment="Center" FontSize="14">Дата регистрации</TextBlock>
+        <TextBlock Grid.Row="8" Grid.RowSpan="2" TextAlignment="Center" FontSize="14">Email</TextBlock>
+
+        <TextBox Text="{Binding FirstName}" Grid.Column="1" Grid.Row="0" Background="#FFE1E4FE" Width="500px" HorizontalAlignment="Left"></TextBox>
+        <TextBox Text="{Binding LastName}" Grid.Column="1" Grid.Row="1" Background="#FFE1E4FE" Width="500px" HorizontalAlignment="Left"></TextBox>
+        <TextBox Text="{Binding Patronymic}" Grid.Column="1" Grid.Row="2" Background="#FFE1E4FE" Width="500px" HorizontalAlignment="Left"></TextBox>
+        <ComboBox SelectedItem="{Binding Gender}" Grid.Column="1" Grid.Row="3" Width="500px" HorizontalAlignment="Left" x:Name="Combogender" DisplayMemberPath="Name" Background="#FFE1E4FE"></ComboBox>
+        <TextBox Text="{Binding Phone}" Grid.Column="1" Grid.Row="4" Background="#FFE1E4FE" Width="500px" HorizontalAlignment="Left"></TextBox>
+        <TextBox Text="{Binding PhotoPath}" Grid.Column="1" Grid.Row="5" Background="#FFE1E4FE" Width="500px" HorizontalAlignment="Left"></TextBox>
+        <TextBox Text="{Binding Birthday}" Grid.Column="1" Grid.Row="6" Background="#FFE1E4FE" Width="500px" HorizontalAlignment="Left"></TextBox>
+
+        <TextBox Text="{Binding RegistrationDate}" Grid.Column="1" Grid.Row="7" Background="#FFE1E4FE" Width="500px" HorizontalAlignment="Left"></TextBox>
+        <TextBox Text="{Binding Email}" Grid.Column="1" Grid.Row="8" Background="#FFE1E4FE"  HorizontalAlignment="Left" Width="500px" ></TextBox>
+        <Button Content="Сохранить" Grid.Row="9" Margin="121,5,268,5" Name="BtnSave" Click="BtnSave_Click" FontSize="20" Background="#FFFF4A6D" Grid.Column="1"/>
+    </Grid>
+</Page>
